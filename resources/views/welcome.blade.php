@@ -45,8 +45,7 @@
                         </g>
                     </svg>
                 </div>
-                <h1 class="mt-2 text-gray-600 dark:text-gray-400 text-xl">HOLI. TQM, AMIX</h1>
-                <h1 class="mt-2 text-gray-600 dark:text-gray-400 text-xl">Perro Anduaga</h1>
+                <h1 class="mt-2 text-gray-600 dark:text-gray-400 text-xl">HOLI</h1>
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
