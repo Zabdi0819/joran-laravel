@@ -28,7 +28,7 @@
                             </td>
                             <td>
                                 <a href="{{ url('edit-prod/'.$item -> id) }}" class="btn btn-primary">Editar</a>
-                                <a href="{{ url('delete-category/'.$item -> id) }}" class="btn btn-danger">Eliminar</a>
+                                <a href="{{ url('delete-category/'.$item -> id) }}" onclick="return confirm('¿Estás seguro de eliminar la categoría de {{ $item -> name }}?')" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
                     @endforeach
