@@ -11,21 +11,21 @@
         
       <ul class="nav">
         <li class="nav-item active  ">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{ url('dashboard') }}">
             <i class="material-icons">dashboard</i>
-            <p>Dashboard</p>
+            <p>Inicio</p>
           </a>
         </li>
         <li class="nav-item ">
           <a class="nav-link" href="{{ url('categories') }}">
             <i class="material-icons">person</i>
-            <p>Categories</p>
+            <p>Categorías</p>
           </a>
         </li>
         <li class="nav-item ">
           <a class="nav-link" href="{{ url('add-category') }}">
             <i class="material-icons">person</i>
-            <p>Add Category</p>
+            <p>Agregar Categoría</p>
           </a>
         </li>
         <li class="nav-item ">
