@@ -28,10 +28,16 @@
             <p>Agregar Categoría</p>
           </a>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./tables.html">
-            <i class="material-icons">content_paste</i>
-            <p>Table List</p>
+        <li class="nav-item {{  Request::is('products') ? 'active':'';}}">
+          <a class="nav-link" href="{{ url('products') }}">
+            <i class="material-icons">person</i>
+            <p>Productos</p>
+          </a>
+        </li>
+        <li class="nav-item {{  Request::is('add-products') ? 'active':'';}}">
+          <a class="nav-link" href="{{ url('add-products') }}">
+            <i class="material-icons">person</i>
+            <p>Agregar Productos</p>
           </a>
         </li>
       </ul>
