@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Frontend\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,11 @@ use App\Http\Controllers\Admin\ProductController;
 |
 */
 
-Route::get('/', function () {
+/**Route::get('/', function () {
     return view('welcome');
-});
+});**/
+
+Route::get('/', [FrontendController::class, 'index']);
 
 Auth::routes();
 
@@ -41,9 +44,4 @@ Route::middleware(['auth', 'isAdmin']) -> group(function(){
     Route::get('edit-product/{id}', [ProductController::class, 'edit']);
     Route::put('update-product/{id}', [ProductController::class, 'update']);
     Route::get('delete-product/{id}', [ProductController::class, 'destroy']);
-    /**Route::get('add-product', 'Admin\ProductController@add');
-    Route::post('insert-product', 'Admin\ProductController@insert');
-    Route::get('edit-product/{id}', [ProductController::class, 'edit']);
-    Route::put('update-category/{id}', [ProductController::class, 'update']);
-    Route::get('delete-category/{id}', [ProductController::class, 'destroy']);**/
 });
