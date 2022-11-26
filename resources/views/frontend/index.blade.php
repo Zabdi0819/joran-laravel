@@ -1,15 +1,16 @@
 @extends('layouts.front')
 
 @section('title')
-    Bienvenido a marcos JORAN
+    Bienvenido
 @endsection
 
 @section('content')
     @include('layouts.inc.slider')
     <div class="py-5">
         <div class="container">
+            <h2>Productos destacados</h2>
+                <br>
             <div class="row">
-                <h2>Productos destacados</h2>
                 <div class="owl-carousel featured-carousel owl-theme">
                     @foreach ($featured_products as $prod)
                         <div class="item">
@@ -19,6 +20,28 @@
                                     <h5>{{ $prod->name }}</h5>
                                     <span class="float-start">{{ $prod->selling_price }}</span>
                                     <span class="float-end"><s>{{ $prod->original_price }}</s></span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-5">
+        <div class="container">
+            <h2>Categorías más populares</h2>
+                <br>
+            <div class="row">
+                <div class="owl-carousel featured-carousel owl-theme">
+                    @foreach ($trending_categories as $cate)
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{ asset('assets/uploads/category/'.$cate->image) }}" alt="Imagen de producto">
+                                <div class="card-body">
+                                    <h5>{{ $cate->name }}</h5>
+                                    <p class="float-start">{{ $cate->description }}</p>
                                 </div>
                             </div>
                         </div>
