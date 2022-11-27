@@ -29,12 +29,15 @@ Route::get('category', [FrontendController::class, 'category']);
 Route::get('view-category/{slug}', [FrontendController::class, 'viewcategory']);
 Route::get('category/{cate_slug}/{prod_slug}', [FrontendController::class, 'productview']);
 
-Route::post('add-to-cart', [CartController::class, 'addProduct'])->name('add-to-cart');
 Auth::routes();
 
-/**Route::middleware(['auth'])->group(function(){
-    Route::post('add-to-cart', [CartController::class, 'addProduct'])->name('add-to-cart');
-});**/
+Route::post('add-to-cart', [CartController::class, 'addProduct'])->name('add-to-cart');
+Route::post('delete-cart-item', [CartController::class, 'deleteproduct']);
+Route::get('cart', [CartController::class, 'viewcart']);
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('cart', [CartController::class, 'viewcart']);
+});
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

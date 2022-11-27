@@ -12,6 +12,9 @@
           <li class="nav-item">
             <a class="nav-link {{  Request::is('category') ? 'active':'';}}" aria-current="page" href="{{ url('category') }}">Categorías</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {{  Request::is('cart') ? 'active':'';}}" aria-current="page" href="{{ url('cart') }}">Carrito</a>
+          </li>
           <!-- Authentication Links -->
             @guest
                 @if (Route::has('login'))

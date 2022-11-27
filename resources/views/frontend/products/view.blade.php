@@ -5,7 +5,15 @@
 @section('content')
     <div class="py-3 mb-4 shadow-sm bg-blue border-top">
         <div class="container">
-            <h6 class="mb-0">Colecciones / {{ $products -> category -> name }} / {{ $products -> name }}</h6>
+            <h6 class="mb-0">
+                <a href="{{ url('category') }}">Colecciones</a> /
+                <a href="{{ url('view-category/'.$products->category->slug) }}">
+                    {{ $products -> category -> name }}
+                </a> /
+                <a href="{{ url('category/'.$products -> category -> slug.'/'.$products -> slug) }}">
+                    {{ $products -> name }}
+                </a>
+            </h6>
         </div>
     </div>
     <div class="container">
