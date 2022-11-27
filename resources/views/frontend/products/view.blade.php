@@ -46,8 +46,8 @@
                             </div>
                             <div class="col-md-10">
                                 <br/>
-                                <button type="button" class="btn btn-success me-3 float-start">Agregar a favoritos</button>
-                                <button type="button" class="btn btn-primary me-3 float-start">Agregar al carrito</button>
+                                <button type="button" class="btn btn-success me-3 float-start">Agregar a favoritos  <i class="fas fa-heart"></i></button>
+                                <button type="button" class="btn btn-primary me-3 float-start">Agregar al carrito <i class="fa fa-shopping-cart"></i></button>
                             </div>
                         </div>
                     </div>

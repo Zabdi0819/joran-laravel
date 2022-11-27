@@ -7,9 +7,6 @@
     -o-background-size: cover;
     background-size: cover;
   }
-
-  .bienvenido{
-    color: brown;
-    font-weight: bold;
-    font-size: large;
-  }
+*{
+  font-family: 'Source Serif Pro', serif;
+}

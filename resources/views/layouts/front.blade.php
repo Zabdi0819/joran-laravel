@@ -21,8 +21,16 @@
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/bootstrap5.css') }}" rel="stylesheet">
 
+    {{--Owl Carousel--}}
     <link href="{{ asset('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet">
+
+    {{--GOOGLE AWESOME--}}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    
+    {{--FONT AWESOME--}}
+    <script src="https://kit.fontawesome.com/2c8d3254b0.js" crossorigin="anonymous"></script>
     <style>
         a{
             text-decoration: none !important;
