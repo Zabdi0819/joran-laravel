@@ -1,13 +1,14 @@
 <?php
 
-use Illuminate\Routing\Route as RoutingRoute;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\CategoryController;
+use Illuminate\Routing\Route as RoutingRoute;
 use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\CartController;
-use Illuminate\Routing\RouteGroup;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Frontend\CheckoutController;
+use App\Http\Controllers\Frontend\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,11 +34,11 @@ Auth::routes();
 
 Route::post('add-to-cart', [CartController::class, 'addProduct'])->name('add-to-cart');
 Route::post('delete-cart-item', [CartController::class, 'deleteproduct']);
-//Route::get('cart', [CartController::class, 'viewcart']);
 Route::post('update-cart', [CartController::class, 'updatecart'])->name('update-cart');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('cart', [CartController::class, 'viewcart']);
+    Route::get('checkout', [CheckoutController::class, 'index']);
 });
 
 
