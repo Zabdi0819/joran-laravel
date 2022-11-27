@@ -72,9 +72,9 @@
                     <div class="card-body">
                         <h6>Detalles de compra</h6>
                         <hr>
-                        <table class="table table-striped">
+                        <table class="table table-bordered table-striped">
                             <thead>
-                                <tr>
+                                <tr style="font-weight: bold;">
                                     <td>Nombre</td>
                                     <td>Cantidad</td>
                                     <td>Precio</td>
