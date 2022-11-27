@@ -33,7 +33,8 @@ Auth::routes();
 
 Route::post('add-to-cart', [CartController::class, 'addProduct'])->name('add-to-cart');
 Route::post('delete-cart-item', [CartController::class, 'deleteproduct']);
-Route::get('cart', [CartController::class, 'viewcart']);
+//Route::get('cart', [CartController::class, 'viewcart']);
+Route::post('update-cart', [CartController::class, 'updatecart'])->name('update-cart');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('cart', [CartController::class, 'viewcart']);
