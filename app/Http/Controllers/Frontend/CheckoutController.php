@@ -21,7 +21,7 @@ class CheckoutController extends Controller
             if(!Product::where('id', $item -> prod_id)->where('qty', '>=',$item -> prod_qty)->exists())
             {
                 $removeItem = Cart::where('user_id', Auth::id())->where('prod_id', $item -> prod_id)->first();
-                $removeItem -> delete();
+                $removeItem -> update();
             }
         }
         $caritems = Cart::where('user_id', Auth::id())->get();
@@ -42,9 +42,20 @@ class CheckoutController extends Controller
         $order -> state = $request -> input('state');
         $order -> country = $request -> input('country');
         $order -> pincode = $request -> input('pincode');
+        
+
+        $total = 0;
+        $caritems_total = Cart::where('user_id', Auth::id())->get();
+        foreach($caritems_total as $prod)
+        {
+            $total += $prod -> products -> selling_price * $prod-> prod_qty;
+        }
+
+        $order -> total_price = $total;
         $order -> tracking_no = "joran".rand(1111, 9999);
         $order  -> save();
 
+        
         $caritems = Cart::where('user_id', Auth::id())->get();
         foreach($caritems as $item)
         {

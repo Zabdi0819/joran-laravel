@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container my-5">
         <form action="{{  url('place-order') }}" method="POST">
             {{ csrf_field() }}
             <div class="row">
@@ -72,8 +72,10 @@
                 <div class="col-md-5">
                     <div class="card">
                         <div class="card-body">
+                            @php $total = 0;@endphp
                             <h6>Detalles de compra</h6>
                             <hr>
+                            @if ($caritems -> count() > 0)
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr style="font-weight: bold;">
@@ -89,11 +91,20 @@
                                             <td>{{ $item -> prod_qty }}</td>
                                             <td>{{ $item -> products -> selling_price }}</td>
                                         </tr>
+                                        @php $total += $item->products->selling_price * $item->prod_qty; @endphp
                                     @endforeach
                                 </tbody>
                             </table>
                             <hr>
+                            <h6>Precio total: {{ $total }}</h6>
+                            <hr>
                             <button type="submit" class="btn btn-primary float-end">Confirmar orden</button>
+                            @else
+                            <div class="card-body text-center">
+                                <h2>Tu <i class="fa fa-shopping-cart"></i>  está vacío</h2>
+                            </div>
+                            @endif
+                            
                         </div>
                     </div>
                 </div>
