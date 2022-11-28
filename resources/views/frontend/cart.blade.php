@@ -15,6 +15,7 @@
     </div>
     <div class="container my-5">
         <div class="card shadow">
+            @if ($caritems -> count() > 0)
             <div class="card-body">
                 @php $total = 0;@endphp
                 @foreach ($caritems as $item)
@@ -55,6 +56,12 @@
                     <a href="{{ url('checkout') }}" class="btn btn-outline-success float-end my-3">Pagar ahora</a>
                 </h6>
             </div>
+            @else
+                <div class="card-body text-center">
+                    <h2>Tu <i class="fa fa-shopping-cart"></i>  está vacío</h2>
+                    <a href="{{ url('category') }}" class="btn btn-outline-primary float-end">Continúa comprando</a>
+                </div>
+            @endif
         </div>
     </div>
 @endsection
