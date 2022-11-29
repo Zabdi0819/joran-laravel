@@ -58,7 +58,7 @@
                                 @if($products -> qty > 0)
                                     <button type="button" class="btn btn-primary me-3 addToCartBtn float-start">Agregar al carrito <i class="fa fa-shopping-cart"></i></button>
                                 @endif
-                                <button type="button" class="btn btn-success me-3 float-start">Agregar a favoritos  <i class="fas fa-heart"></i></button>
+                                <button type="button" class="btn btn-success me-3 addToWishlist float-start">Agregar a favoritos  <i class="fas fa-heart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -94,6 +94,29 @@
                     data:{
                         'product_id': product_id,
                         'product_qty': product_qty,
+                    },
+                    success: function(response){
+                        swal(response.status);
+                    }
+                });
+            });
+
+            $('.addToWishlist').click(function(e){
+                e.preventDefault();
+                
+                var product_id = $(this).closest('.product_data').find('.prod_id').val();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    method: "POST",
+                    url: "{{ route('add-to-wishlist') }}",
+                    data:{
+                        'product_id': product_id,
                     },
                     success: function(response){
                         swal(response.status);

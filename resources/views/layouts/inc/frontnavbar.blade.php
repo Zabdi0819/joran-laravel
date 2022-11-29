@@ -13,7 +13,10 @@
             <a class="nav-link {{  Request::is('category') ? 'active':'';}}" aria-current="page" href="{{ url('category') }}">Categorías</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{  Request::is('cart') ? 'active':'';}}" aria-current="page" href="{{ url('cart') }}">Carrito</a>
+            <a class="nav-link {{  Request::is('cart') ? 'active':'';}}" aria-current="page" href="{{ url('cart') }}"><i class="fa fa-shopping-cart"></i> Carrito</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{  Request::is('wishlist') ? 'active':'';}}" aria-current="page" href="{{ url('wishlist') }}"> <i class="fas fa-heart"></i> Favoritos</a>
           </li>
           <!-- Authentication Links -->
             @guest
