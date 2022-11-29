@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
 
@@ -72,6 +73,7 @@ Route::middleware(['auth', 'isAdmin']) -> group(function(){
     Route::put('update-order/{id}', [OrderController::class, 'updateorder']);
     Route::get('order-history', [OrderController::class, 'orderhistory']);
 
-    Route::get('users', [FrontendController::class, 'index']);
+    Route::get('users', [DashboardController::class, 'users']);
+    Route::get('view-users/{id}', [DashboardController::class, 'viewusers']);
     
 });

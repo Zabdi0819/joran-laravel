@@ -71,7 +71,7 @@ class CheckoutController extends Controller
             $prod -> update();
         }
 
-        if(!Auth::user()->address1 == NULL)
+        if(Auth::user()->address1 == NULL)
         {
             $user = User::where('id', Auth::id())->first();
             $user -> name = $request -> input('fname');
