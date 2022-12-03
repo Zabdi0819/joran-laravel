@@ -3,7 +3,7 @@
 @section('title', $products -> name)
 
 @section('content')
-    <div class="py-3 mb-4 shadow-sm bg-blue border-top">
+    <div class="py-2 mb-4 shadow-sm border-top bgCSubNav">
         <div class="container">
             <h6 class="mb-0">
                 <a href="{{ url('category') }}">Colecciones</a> /

@@ -87,4 +87,10 @@ class CartController extends Controller
             return response() -> json(['status' => "Inicia sesión para continuar"]);
         }
     }
+
+    public function cartcount()
+    {
+        $carcount = Cart::where('user_id', Auth::id())->count();
+        return response() -> json(['count' => $carcount]);
+    }
 }

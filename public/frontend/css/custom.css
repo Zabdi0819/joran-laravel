@@ -37,3 +37,22 @@
 .order-details h4{
   font-weight: bold;
 }
+
+.bgCNav{
+  background-color: #320000;
+}
+
+.bgCFoot{
+  background-color: #5d2417;
+}
+
+.bgCSubNav{
+  background-color: #c57d56;
+  height: 42px;
+  
+}
+
+.bgCSubNav a{
+  font-size: 20px;
+  font-weight: 600;
+}

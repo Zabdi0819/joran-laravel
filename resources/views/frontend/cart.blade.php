@@ -15,8 +15,10 @@
     </div>
     <div class="container my-5">
         <div class="card shadow">
-            @if ($caritems -> count() > 0)
             <div class="card-body">
+                @if ($caritems -> count() > 0)
+                <h3>Total de artículos: <span class="badge badge-pill bg-dark cart-count">0</span></h3>
+                <hr>
                 @php $total = 0;@endphp
                 @foreach ($caritems as $item)
                     <div class="row product_data">

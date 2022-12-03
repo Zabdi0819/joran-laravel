@@ -36,6 +36,9 @@ Route::get('category/{cate_slug}/{prod_slug}', [FrontendController::class, 'prod
 
 Auth::routes();
 
+Route::get('load-cart-data', [CartController::class, 'cartcount']);
+Route::get('load-wishlist-data', [WishListController::class, 'wishlistcount']);
+
 Route::post('add-to-cart', [CartController::class, 'addProduct'])->name('add-to-cart');
 Route::post('delete-cart-item', [CartController::class, 'deleteproduct']);
 Route::post('update-cart', [CartController::class, 'updatecart'])->name('update-cart');
@@ -46,7 +49,7 @@ Route::post('delete-wishlist-item', [WishListController::class, 'deletewishlist'
 Route::middleware(['auth'])->group(function(){
     Route::get('cart', [CartController::class, 'viewcart']);
     Route::get('checkout', [CheckoutController::class, 'index']);
-    Route::post('place-order', [CheckoutController::class, 'placeorder']);
+    Route::post('place-order', [CheckoutController::class, 'placeorder'])->name('place-order');
 
     Route::get('my-orders', [UserController::class, 'index']);
     Route::get('view-order/{id}', [UserController::class, 'view']);

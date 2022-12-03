@@ -17,6 +17,8 @@
         <div class="card shadow">
             <div class="card-body">
                 @if ($wishlists -> count() > 0)
+                <h3>Total de favoritos: <span class="badge badge-pill bg-dark wishlist-count">0</span></h3>
+                <hr>
                     @foreach ($wishlists as $item)
                         <div class="row product_data">
                             <div class="col-md-2 my-auto">
@@ -88,30 +90,30 @@
                     }
                 });
             });
-        });
-        $('.delete-wishlist-item').click(function(e){
-            e.preventDefault();
-            
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
+
+            $('.addToWishlist').click(function(e){
+                e.preventDefault();
+                
+                var product_id = $(this).closest('.product_data').find('.prod_id').val();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    method: "POST",
+                    url: "{{ route('add-to-wishlist') }}",
+                    data:{
+                        'product_id': product_id,
+                    },
+                    success: function(response){
+                        swal(response.status);
+                    }
+                });
             });
-    
-            var prod_id = $(this).closest('.product_data').find('.prod_id').val();
-    
-            $.ajax({
-                method: "POST",
-                url: "delete-wishlist-item",
-                data:{
-                    'prod_id': prod_id
-                },
-                success: function(response){
-                    swal(response.status).then(function() {
-                        window.location.reload();
-                    });
-                }
-            });
         });
+
     </script>
 @endsection

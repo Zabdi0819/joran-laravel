@@ -34,3 +34,12 @@
   .order-details h4{
     font-weight: bold;
   }
+
+  .bgCNav{
+    background-color: #5d2417;
+  }
+
+  .textNav{
+    color: #fff;
+    font-weight: 500;
+  }

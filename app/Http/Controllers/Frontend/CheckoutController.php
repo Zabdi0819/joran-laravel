@@ -42,6 +42,9 @@ class CheckoutController extends Controller
         $order -> state = $request -> input('state');
         $order -> country = $request -> input('country');
         $order -> pincode = $request -> input('pincode');
+
+        $order -> payment_mode = $request -> input('payment_mode');
+        $order -> payment_id = $request -> input('payment_id');
         
 
         $total = 0;
@@ -87,6 +90,11 @@ class CheckoutController extends Controller
         }
         $caritems = Cart::where('user_id', Auth::id())->get();
         Cart::destroy($caritems);
+
+        if($request -> input('payment_mode') == "Pagado con Paypal")
+        {
+            return response() -> json(['status' => "Orden realizada satisfactoriamente"]);
+        }
         return redirect('/')->with('status', "Orden realizada satisfactoriamente");
     }
 }

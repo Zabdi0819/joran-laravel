@@ -62,7 +62,8 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <h4 class="px-2">Total:  <span  class= "float-end">${{ $orders -> total_price }}</span></h4>
+                            <h3 class="px-2">Total:  <span  class= "float-end">${{ $orders -> total_price }}</span></h3>
+                            <h4 class="px-2">{{ $orders -> payment_mode }}</h4>
                         </div>
                     </div>
                 </div>

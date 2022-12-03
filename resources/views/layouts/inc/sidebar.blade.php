@@ -4,52 +4,52 @@
 
       Tip 2: you can also add an image using data-image tag
   -->
-    <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+    <div class="logo" style="background-color: #320000">
+      <a href="{{ url('/') }}" class="simple-text logo-normal" style="color: #fff; font-weight:bold; font-size:32px">
         JORAN
       </a></div>
-    <div class="sidebar-wrapper">
-        
+    <div class="sidebar-wrapper bgCNav">
       <ul class="nav">
         <li class="nav-item {{  Request::is('dashboard') ? 'active':'';}}  ">
           <a class="nav-link" href="{{ url('dashboard') }}">
             <i class="material-icons">dashboard</i>
-            <p>Inicio</p>
+            <p class="textNav" style="font-size: 18px">Inicio</p>
           </a>
         </li>
         <li class="nav-item {{  Request::is('categories') ? 'active':'';}}">
-          <a class="nav-link" href="{{ url('categories') }}">
-            <i class="material-icons">person</i>
-            <p>Categorías</p>
+          <a class="nav-link textNav" href="{{ url('categories') }}">
+            <i class="material-icons">category</i>
+            <p class="textNav" style="font-size: 18px">Categorías</p>
           </a>
         </li>
         <li class="nav-item {{  Request::is('add-category') ? 'active':'';}}">
           <a class="nav-link" href="{{ url('add-category') }}">
-            <i class="material-icons">person</i>
-            <p>Agregar Categoría</p>
+            <i class="material-icons">add</i>
+            <p class="textNav" style="font-size: 18px">Agregar Categoría</p>
           </a>
         </li>
         <li class="nav-item {{  Request::is('products') ? 'active':'';}}">
           <a class="nav-link" href="{{ url('products') }}">
-            <i class="material-icons">person</i>
-            <p>Productos</p>
+            <i class="material-icons">inventory</i>
+            <p class="textNav" style="font-size: 18px">Productos</p>
           </a>
         </li>
         <li class="nav-item {{  Request::is('add-products') ? 'active':'';}}">
           <a class="nav-link" href="{{ url('add-products') }}">
-            <i class="material-icons">person</i>
-            <p>Agregar Productos</p>
+            <i class="material-icons">add</i>
+            <p class="textNav" style="font-size: 18px">Agregar Productos</p>
           </a>
         </li>
         <li class="nav-item {{  Request::is('orders') ? 'active':'';}}">
           <a class="nav-link" href="{{ url('orders') }}">
-            <i class="material-icons">person</i>
-            <p>Órdenes</p>
+            <i class="material-icons">reorder</i>
+            <p class="textNav" style="font-size: 18px">Órdenes</p>
           </a>
         </li>
         <li class="nav-item {{  Request::is('users') ? 'active':'';}}">
           <a class="nav-link" href="{{ url('users') }}">
             <i class="material-icons">person</i>
-            <p>Usuarios</p>
+            <p class="textNav" style="font-size: 18px">Usuarios</p>
           </a>
         </li>
       </ul>
