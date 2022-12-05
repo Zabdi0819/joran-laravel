@@ -5,7 +5,16 @@
 @endsection
 
 @section('content')
-    <div class="container my-5">
+    <div class="py-3 mb-4 shadow-sm bgCSubNav">
+        <div class="container">
+            <h6 class="mb-0">
+                <a href="{{ url('/') }}">Inicio</a> /
+                <a href="{{ url('cart') }}">Carrito de compras</a> /
+                <a href="{{ url('checkout') }}">Comprar ahora</a>
+            </h6>
+        </div>
+    </div>
+    <div class="container py-3">
         <form action="{{  url('place-order') }}" method="POST">
             {{ csrf_field() }}
             <div class="row">
@@ -96,22 +105,23 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($caritems as $item)
-                                        <tr>
-                                            <td>{{ $item -> products -> name }}</td>
-                                            <td>{{ $item -> prod_qty }}</td>
-                                            <td>{{ $item -> products -> selling_price }}</td>
-                                        </tr>
-                                        @php $total += $item->products->selling_price * $item->prod_qty; @endphp
+                                        @if($item -> products -> qty >= $item -> prod_qty)
+                                            <tr>
+                                                <td>{{ $item -> products -> name }}</td>
+                                                <td>{{ $item -> prod_qty }}</td>
+                                                <td>{{ $item -> products -> selling_price }}</td>
+                                            </tr>
+                                            @php $total += $item->products->selling_price * $item->prod_qty; @endphp
+                                        @endif
                                     @endforeach
                                 </tbody>
                             </table>
                             <hr>
                             <h6>Precio total: {{ $total }}</h6>
                             <hr>
-                            <button type="submit" class="btn btn-primary">Confirmar orden</button>
                             <button type="button" class="btn btn-primary paypal_btn">Continuar con el pago</button>
                             <div id="paymentBtn" class="my-3" style="display: none">
-                                <div id="paypal-button-container"></div>
+                                <div class="my-3" id="paypal-button-container"></div>
                             </div>
                             @else
                             <div class="card-body text-center">

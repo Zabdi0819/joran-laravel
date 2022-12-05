@@ -21,7 +21,7 @@
             <a class="nav-link {{  Request::is('wishlist') ? 'active':'';}}" aria-current="page" href="{{ url('wishlist') }}"> <i class="fas fa-heart"></i> Favoritos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{  Request::is('wishlist') ? 'active':'';}}" aria-current="page" href="{{ url('know') }}">Conócenos</a>
+            <a class="nav-link {{  Request::is('know') ? 'active':'';}}" aria-current="page" href="{{ url('know') }}">Conócenos</a>
           </li>
 
           <!-- Authentication Links -->
