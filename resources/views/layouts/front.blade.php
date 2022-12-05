@@ -42,7 +42,7 @@
 <body>
 
     @include('layouts.inc.frontnavbar')
-    <div class="content">
+    <div class="content" style="background-color: #ffb48a;">
         @yield('content')
     </div>
 

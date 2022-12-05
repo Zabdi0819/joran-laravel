@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #320000">
+<nav class="navbar navbar-expand-lg navbar-dark bgCNav">
     <div class="container">
-      <a class="navbar-brand" href="{{ url('/') }}">JORAN</a>
+      <a class="navbar-brand" href="{{ url('/') }}">
+        <img src="{{ asset('assets/images/JORAN.png') }}" style="width: 100px" alt="LOGO">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -8,7 +10,7 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
                 <a class="nav-link {{  Request::is('/') ? 'active':'';}}" href="{{ url('/') }}">Inicio</a>
-              </li>
+            </li>
           <li class="nav-item">
             <a class="nav-link {{  Request::is('category') ? 'active':'';}}" aria-current="page" href="{{ url('category') }}">Categorías</a>
           </li>
@@ -18,6 +20,10 @@
           <li class="nav-item">
             <a class="nav-link {{  Request::is('wishlist') ? 'active':'';}}" aria-current="page" href="{{ url('wishlist') }}"> <i class="fas fa-heart"></i> Favoritos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {{  Request::is('wishlist') ? 'active':'';}}" aria-current="page" href="{{ url('know') }}">Conócenos</a>
+          </li>
+
           <!-- Authentication Links -->
             @guest
                 @if (Route::has('login'))

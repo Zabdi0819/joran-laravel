@@ -16,6 +16,11 @@ class FrontendController extends Controller
         return view('frontend.index', compact('featured_products', 'trending_categories'));
     }
 
+    public function know()
+    {
+        return view('frontend.know');
+    }
+
     public function category()
     {
         $category = Category::where('status', '0')->get();

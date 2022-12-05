@@ -22,10 +22,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bgCNav shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bgCNav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    JORAN
+                    <img src="{{ asset('assets/images/JORAN.png') }}" style="width: 100px" alt="LOGO">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

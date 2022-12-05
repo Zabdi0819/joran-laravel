@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="py-3 mb-4 shadow-sm bg-blue border-top">
+    <div class="py-3 mb-4 shadow-sm bgCSubNav">
         <div class="container">
             <h6 class="mb-0">
                 <a href="{{ url('/') }}">Inicio</a> /
@@ -13,7 +13,7 @@
             </h6>
         </div>
     </div>
-    <div class="container my-5">
+    <div class="container py-3 my-0">
         <div class="card shadow">
             <div class="card-body">
                 @if ($caritems -> count() > 0)

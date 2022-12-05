@@ -40,15 +40,18 @@
 
 .bgCNav{
   background-color: #320000;
+  font-size: 18px;
+  font-weight: 600
 }
+
 
 .bgCFoot{
   background-color: #5d2417;
 }
 
 .bgCSubNav{
-  background-color: #c57d56;
-  height: 42px;
+  background-color: #8d4925;
+  height: 50px;
   
 }
 
