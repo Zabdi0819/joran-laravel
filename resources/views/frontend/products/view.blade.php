@@ -3,7 +3,7 @@
 @section('title', $products -> name)
 
 @section('content')
-    <div class="py-2 mb-4 shadow-sm border-top bgCSubNav">
+    <div class="py-2 mb-2 shadow-sm bgCSubNav">
         <div class="container">
             <h6 class="mb-0">
                 <a href="{{ url('category') }}">Colecciones</a> /
@@ -16,9 +16,9 @@
             </h6>
         </div>
     </div>
-    <div class="container my-3">
-        <div class="card shadow product_data">
-            <div class="card-body">
+    <div class="container py-3">
+        <div class="card shadow bg-light bg-gradient product_data">
+            <div class="card-body" >
                 <div class="row">
                     <div class="col-md-4 border-right">
                         <img src="{{ asset('assets/uploads/product/'.$products -> image) }}" class="w-100" alt="">
@@ -32,8 +32,8 @@
                         </h2>
 
                         <hr>
-                        <label class="me-3">Original price: <s>$ {{ $products -> original_price }}</s></label>
-                        <label class="fw-bold">Selling price: $ {{ $products -> selling_price }}</label>
+                        <label class="me-3">Precio Original: <s>$ {{ $products -> original_price }}</s></label>
+                        <label class="fw-bold">Precio de venta: $ {{ $products -> selling_price }}</label>
                         <p class="mt-3">
                             {!! $products -> small_description !!}
                         </p>
