@@ -42,7 +42,7 @@
 <body>
 
     @include('layouts.inc.frontnavbar')
-    <div class="content" style="background-color: #ffb48a;">
+    <div class="content" style="background-image: url({{ asset('assets/images/maderaB.jpg') }});">
         @yield('content')
     </div>
 
