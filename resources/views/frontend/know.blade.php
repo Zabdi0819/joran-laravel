@@ -10,15 +10,15 @@
             <br>
             <br>
             <h1 class="text-white text-center">¿Quiénes somos?</h1>
-            <div class="row">
-                <div class="col-md-6 align-self-center text-white">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
+                <div class="col align-self-center text-white">
                     <p class="fs-3 " style="text-align: justify; padding: 20px">
                         Somos una empresa dedicada a la venta de marcos de madera. Trabajamos con material de la mejor calidad para garantizar los acabados de sus proyectos.
                         <br> En <B>Marcos JORAN</B>  ofrecemos excelentes precios, es por eso que nos hemos posicionado como una empresa líder en el estado de Aguascalientes.
                     </p>
                 </div>
-                <div class="col-md-6">
-                    <img src="{{ asset('assets/images/JORAN.png') }}" class="rounded mx-auto d-block" style="width: 400px" alt="LOGO">
+                <div class="col">
+                    <img src="{{ asset('assets/images/JORAN.png') }}" class="rounded mx-auto d-block" style="width: 70%; height: auto" alt="LOGO">
 
                 </div>
             </div>
@@ -32,9 +32,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 align-self-center text-white">
-                        <img src="{{ asset('assets/images/marcos.jpg') }}" class="rounded mx-auto d-block" style="width: 400px" alt="LOGO">
+                        <img src="{{ asset('assets/images/marcos.jpg') }}" class="rounded mx-auto d-block" style="width: 60%; height: auto" alt="LOGO">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 align-self-center">
                         <p class="fs-3 " style="text-align: justify; padding: 20px">
                             Contamos con más de 15 molduras y distintos tipos de productos que encajen con lo que buscas.
                         </p>

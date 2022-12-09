@@ -21,6 +21,26 @@ class FrontendController extends Controller
         return view('frontend.know');
     }
 
+    public function terms()
+    {
+        return view('frontend.terms');
+    }
+
+    public function delivery()
+    {
+        return view('frontend.delivery');
+    }
+
+    public function invoice()
+    {
+        return view('frontend.invoice');
+    }
+
+    public function guarantee()
+    {
+        return view('frontend.guarantee');
+    }
+
     public function category()
     {
         $category = Category::where('status', '0')->get();

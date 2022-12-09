@@ -32,6 +32,10 @@ use App\Http\Controllers\Frontend\WishListController;
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('category', [FrontendController::class, 'category']);
 Route::get('know', [FrontendController::class, 'know']);
+Route::get('terms', [FrontendController::class, 'terms']);
+Route::get('delivery', [FrontendController::class, 'delivery']);
+Route::get('guarantee', [FrontendController::class, 'guarantee']);
+Route::get('invoice', [FrontendController::class, 'invoice']);
 Route::get('view-category/{slug}', [FrontendController::class, 'viewcategory']);
 Route::get('category/{cate_slug}/{prod_slug}', [FrontendController::class, 'productview']);
 
