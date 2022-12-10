@@ -58,6 +58,8 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('my-orders', [UserController::class, 'index']);
     Route::get('view-order/{id}', [UserController::class, 'view']);
+    Route::get('view-pdf/{id}', [UserController::class, 'viewpdf']);
+
 
     Route::get('wishlist', [WishListController::class, 'index']);    
 });
@@ -86,6 +88,7 @@ Route::middleware(['auth', 'isAdmin']) -> group(function(){
     Route::get('admin/view-order/{id}', [OrderController::class, 'view']);
     Route::put('update-order/{id}', [OrderController::class, 'updateorder']);
     Route::get('order-history', [OrderController::class, 'orderhistory']);
+
 
     Route::get('users', [DashboardController::class, 'users']);
     Route::get('view-users/{id}', [DashboardController::class, 'viewusers']);

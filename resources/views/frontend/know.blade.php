@@ -41,9 +41,18 @@
                     </div>
                 </div>
                 <br>
+                <br>
+                <h4 class="fs-3 " style="text-align: justify; padding: 20px">
+                    Queremos que los espacios se vuelvan un lugar personal y que refleje el estilo de cada persona. Nos aseguramos que cada marco reciba la atención personalizada y sea de la mejor calidad. Somos una empresa a la vanguardia en decoración de interiores, manteniendo nuestro compromiso social.
+                </h4>
+                <br>
                 <hr>
                 <br>
                 <h1 class="text-center" style="font-weight:bold">!Hacemos tus ideas realidad!</h1>
+                <br>
+                <img src="{{ asset('assets/images/collage.png') }}" class="rounded mx-auto d-block" style="width: 50%; height: auto" alt="COLLAGE">
+                <br>
+                <br>
             </div>
     </div>
         

@@ -1,29 +1,56 @@
-@extends('layouts.front')
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@section('title')
-    Mis órdenes
-@endsection
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>
+        @yield('title')
+    </title>
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <!-- Styles -->
+    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/bootstrap5.css') }}" rel="stylesheet">
+
+    {{--Owl Carousel--}}
+    <link href="{{ asset('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet">
+
+    {{--GOOGLE AWESOME--}}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    
+    {{--FONT AWESOME--}}
+    <script src="https://kit.fontawesome.com/2c8d3254b0.js" crossorigin="anonymous"></script>
+    <style>
+        a{
+            text-decoration: none !important;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
     <div class="container py-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-dark bg-gradient">
-                        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 align-self-center">
-                            <div class="col">
-                                <h4 class="text-white">Folio: {{ $orders -> tracking_no }}</h4>
-                            </div>
-                            <div class="col">
-                                <a href="{{ url('view-pdf/'.$orders->id) }}" class="btn btn-primary bg-gradient float-end" style="width: 140px">Descargar PDF</a>
-                            </div>
-                            <div class="col">
-                                <a href="{{ url('my-orders') }}" class="btn btn-warning bg-gradient float-end" style="width: 140px">Regresar</a>
-                            </div>
-                          </div>
+                        <h4 class="text-white">Folio: {{ $orders -> tracking_no }}
+                        </h4>
                     </div>
                 </div>
-                <div class="card-body border bg-light bg-gradient shadow-lg">
+                <div class="card-body border">
                     <div class="row">
                         <div class="col-md-6 order-details">
                             <h4>Detalles de envío</h4>
@@ -78,4 +105,16 @@
             </div>
         </div>
     </div>
-@endsection
+
+
+
+
+    <script src="{{ asset('frontend/js/jquery-3.6.1.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/custom.js') }}"></script>
+
+    @yield('scripts')
+</body>
+
+</html>

@@ -9,12 +9,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-dark bg-gradient text-white">
                         <h4>Mis órdenes</h4>
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered border-dark bg-light bg-gradient shadow-lg">
                         <thead>
                             <th>Fecha de orden</th>
                             <th>Número de rastreo</th>

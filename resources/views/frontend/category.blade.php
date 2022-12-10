@@ -5,6 +5,16 @@
 @endsection
 
 @section('content')
+    <div class="py-2 mb-2 shadow-sm bgCSubNav">
+        <div class="container">
+            <h6 class="mb-0">
+                <a href="{{ url('/') }}">Inicio</a> /
+                <a href="{{ url('category') }}">
+                    Categorías
+                </a> 
+            </h6>
+        </div>
+    </div>
     <div class="py-5">
         <div class="container">
             <div class="row">
