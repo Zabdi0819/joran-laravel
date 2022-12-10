@@ -1,0 +1,24 @@
+{
+    "material icons": {
+        "normal": "material_icons_normal_068f47cc203bdcfe98c32348c776f16d"
+    },
+    "roboto": {
+        "300": "C:\\xampp\\htdocs\\joran-laravel\\storage\\fonts\/roboto_300_32acfcb296f555e063ebba2be7db9e2f",
+        "normal": "C:\\xampp\\htdocs\\joran-laravel\\storage\\fonts\/roboto_normal_7bc701b343c10631f60048716b96e4f7",
+        "500": "C:\\xampp\\htdocs\\joran-laravel\\storage\\fonts\/roboto_500_5774d6fb05eba3d096525f821dbe4137",
+        "bold": "roboto_bold_8db5cb5d0586c1e891426d13097b1d04"
+    },
+    "roboto slab": {
+        "normal": "C:\\xampp\\htdocs\\joran-laravel\\storage\\fonts\/roboto_slab_normal_86060135d7ee2e25e66ede3e2617126b",
+        "bold": "roboto_slab_bold_fd2503d26d6705fa3fd524d1e52fc488"
+    },
+    "fontawesome": {
+        "normal": "fontawesome_normal_d726fe9f0eedcde03c194e171054f6d7"
+    },
+    "noto sans": {
+        "normal": "noto_sans_normal_962db05b75cb4a7f19e1d9d224a27992"
+    },
+    "source serif pro": {
+        "normal": "source_serif_pro_normal_c26c0b4caa39aff75763932d5002a6eb"
+    }
+}

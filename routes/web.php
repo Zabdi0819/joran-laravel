@@ -59,6 +59,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('my-orders', [UserController::class, 'index']);
     Route::get('view-order/{id}', [UserController::class, 'view']);
     Route::get('view-pdf/{id}', [UserController::class, 'viewpdf']);
+    Route::get('profile', [UserController::class, 'profile']);
+    Route::put('update-profile', [UserController::class, 'updateprofile']);
 
 
     Route::get('wishlist', [WishListController::class, 'index']);    

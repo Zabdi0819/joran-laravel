@@ -16,7 +16,7 @@
             </h6>
         </div>
     </div>
-    <div class="container py-3" style="background-image: url({{ asset('assets/images/maderaB.jpg') }});">
+    <div class="container py-3">
         <div class="card shadow bg-light bg-gradient product_data">
             <div class="card-body" >
                 <div class="row">

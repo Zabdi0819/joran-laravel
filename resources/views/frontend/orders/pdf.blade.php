@@ -41,30 +41,30 @@
 
 <body>
 
-    <div class="container py-5">
+    <div class="container py-2">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-dark bg-gradient">
-                        <h4 class="text-white">Folio: {{ $orders -> tracking_no }}
-                        </h4>
+                        <h3 class="text-white">Folio: {{ $orders -> tracking_no }}
+                        </h3>
                     </div>
                 </div>
-                <div class="card-body border">
+                <div class="card-body border" style="background-color:antiquewhite">
                     <div class="row">
-                        <div class="col-md-6 order-details">
-                            <h4>Detalles de envío</h4>
+                        <div class="col-6 order-details">
+                            <h4><strong> Detalles de envío</strong></h4>
                             <hr>
                             <label for="">Nombre: </label>
-                            <div class="border border-dark">{{ $orders -> fname }}</div>
+                            <div class="border border-dark bg-light">{{ $orders -> fname }}</div>
                             <label for="">Apellido: </label>
-                            <div class="border border-dark">{{ $orders -> lname }}</div>
+                            <div class="border border-dark bg-light">{{ $orders -> lname }}</div>
                             <label for="">Correo: </label>
-                            <div class="border border-dark">{{ $orders -> email }}</div>
+                            <div class="border border-dark bg-light">{{ $orders -> email }}</div>
                             <label for="">Número de contacto: </label>
-                            <div class="border border-dark">{{ $orders -> phone }}</div>
+                            <div class="border border-dark bg-light">{{ $orders -> phone }}</div>
                             <label for="">Dirección de entrega: </label>
-                            <div class="border border-dark">
+                            <div class="border border-dark bg-light">
                                 {{ $orders -> address1 }} <br>
                                 {{ $orders -> address2 }} <br>
                                 {{ $orders -> city }} <br>
@@ -72,12 +72,13 @@
                                 {{ $orders -> country }}
                             </div>
                             <label for="">C.P: </label>
-                            <div class="border border-dark">{{ $orders -> pincode }}</div>
+                            <div class="border border-dark bg-light">{{ $orders -> pincode }}</div>
                         </div>
-                        <div class="col-md-6 order-details">
-                            <h4>Detalles de la orden</h4>
+                        <br>
+                        <div class="col-6 order-details border-dark">
+                            <h4><strong>Detalles de la orden</strong> </h4>
                             <hr>
-                            <table class="table table-bordered border-dark">
+                            <table class="table table-bordered border-dark bg-light">
                                 <thead>
                                     <th>Nombre</th>
                                     <th>Cantidad</th>
@@ -97,6 +98,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            <hr>
                             <h3 class="px-2">Total:  <span  class= "float-end">${{ $orders -> total_price }}</span></h3>
                             <h4 class="px-2">{{ $orders -> payment_mode }}</h4>
                         </div>
