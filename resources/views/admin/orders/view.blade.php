@@ -5,13 +5,14 @@
 @endsection
 
 @section('content')
+<div class="py-3">
     <div class="container bg-light">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-primary">
                         <h4 class="text-white">Orden {{ $orders -> tracking_no }}
-                            <a href="{{ url('orders') }}" class="btn btn-warning float-right">Regresar</a>
+                            <a href="{{ url('orders') }}" class="btn btn-warning float-end">Regresar</a>
                         </h4>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <h4 class="px-2">Total:  <span  class= "float-right">${{ $orders -> total_price }}</span></h4>
+                            <h4 class="px-2">Total:  <span  class= "float-end">${{ $orders -> total_price }}</span></h4>
                             <div class="mt-3">
                                 <label for="">Estado de la orden</label>
                                 <form action="{{ url('update-order/'.$orders->id) }}" method="POST">
@@ -81,4 +82,6 @@
             </div>
         </div>
     </div>
+</div>
+    
 @endsection

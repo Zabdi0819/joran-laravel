@@ -49,6 +49,7 @@
                                     <button class="btn btn-danger btn-sm delete-wishlist-item"><i class="fa fa-trash"></i> Eliminar</button>
                                 </div>
                             @else
+                                <input type="hidden" class="prod_id" value="{{ $item->prod_id }}">
                                 <div class="col-md-2 my-auto">
                                     <h5 style="font-weight: bold;">Producto agotado</h5>
                                 </div>
@@ -67,6 +68,7 @@
                 @endif
             </div>
         </div>
+        <br> <br>
     </div>
 @endsection
 

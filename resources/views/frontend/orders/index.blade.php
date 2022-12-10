@@ -8,12 +8,12 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card" >
                     <div class="card-header bg-dark bg-gradient text-white">
                         <h4>Mis órdenes</h4>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="overflow-x:scroll; width: 100%">
                     <table class="table table-bordered border-dark bg-light bg-gradient shadow-lg">
                         <thead>
                             <th>Fecha de orden</th>

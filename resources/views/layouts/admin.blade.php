@@ -8,7 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>
+        @yield('title')
+    </title>
 
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -16,27 +18,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
     <!-- Styles -->
+
     <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/material-dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/bootstrap5.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper ">
-        @include('layouts.inc.sidebar')
+    @include('layouts.inc.adminnav')
 
-        <div class="main-panel">
-            @include('layouts.inc.adminnav')
-
-            <div class="content">
-                @yield('content')
-            </div>
-
-            @include('layouts.inc.adminfooter')
-        </div>
+    <div class="content" style="background-image: url({{ asset('assets/images/maderaB.jpg') }});">
+        @yield('content')
     </div>
+
+    @include('layouts.inc.adminfooter')
 
     <script src="{{ asset('admin/js/jquery.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/popper.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/jquery-3.6.1.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('admin/js/bootstrap-material-design.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/perfect-scrollbar.jquery.min.js') }}" defer></script>
     
