@@ -7,7 +7,7 @@
                 <div class="card-header bg-primary">
                     <h4>Agregar producto</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="overflow-x:scroll; width: 100%">
                     <form action="{{ url('insert-product') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">

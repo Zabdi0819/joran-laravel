@@ -7,7 +7,7 @@
                 <div class="card-header bg-primary">
                     <h4>Editar/Actualizar categoría</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="overflow-x:scroll; width: 100%">
                     <form action="{{ url('update-category/'.$category -> id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')

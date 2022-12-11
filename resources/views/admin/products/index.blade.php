@@ -7,7 +7,7 @@
                 <div class="card-header bg-primary">
                     <h4>Productos</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="overflow-x:scroll; width: 100%">
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>

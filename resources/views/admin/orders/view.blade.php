@@ -16,7 +16,7 @@
                         </h4>
                     </div>
                 </div>
-                <div class="card-body border bg-white">
+                <div class="card-body border bg-white" style="overflow-x:scroll; width: 100%">
                     <div class="row">
                         <div class="col-md-6 order-details">
                             <h4>Detalles de envío</h4>

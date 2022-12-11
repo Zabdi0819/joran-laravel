@@ -16,7 +16,7 @@
                             </h4>
                         </div>
                     </div>
-                    <div class="card-body bg-white">
+                    <div class="card-body bg-white" style="overflow-x:scroll; width: 100%">
                         <table class="table table-bordered" style="width: 100%">
                             <thead>
                                 <th>Fecha de orden</th>

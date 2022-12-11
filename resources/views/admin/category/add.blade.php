@@ -7,7 +7,7 @@
             <div class="card-header bg-primary">
                 <h4>Agregar categoría</h4>
             </div>
-            <div class="card-body">
+            <div class="card-body" style="overflow-x:scroll; width: 100%">
                 <form action="{{ url('insert-category') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
